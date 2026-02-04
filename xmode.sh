@@ -28,6 +28,7 @@ NODES=(
     "https://github.com/ZhiHui6/zhihui_nodes_comfyui"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/crystian/ComfyUI-Crystools"
+    "https://github.com/jnxmx/ComfyUI_HuggingFace_Downloader"
 )
 
 # ЗАГРУЗКА ФАЙЛОВ НУЖНЫХ
@@ -82,6 +83,25 @@ BBOX_4=(
 BBOX_5=(
     "https://huggingface.co/gazsuv/xmode/resolve/main/assdetailer.pt"
 )
+SAM_PTH=(
+    "https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/sams/sam_vit_b_01ec64.pth"
+)
+
+BBOX_6=(
+    "https://huggingface.co/gazsuv/pussydetectorv4/resolve/main/Eyeful_v2-Paired.pt"
+)
+
+BBOX_7=(
+    "https://huggingface.co/gazsuv/pussydetectorv4/resolve/main/Eyes.pt"
+)
+
+BBOX_8=(
+    "https://huggingface.co/gazsuv/pussydetectorv4/resolve/main/FacesV1.pt"
+)
+
+BBOX_9=(
+    "https://huggingface.co/gazsuv/pussydetectorv4/resolve/main/hand_yolov8s.pt"
+)
 
 QWEN3VL=(
     "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/model-00001-of-00002.safetensors"
@@ -125,6 +145,11 @@ function provisioning_start() {
     provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_3[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_4[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_5[@]}"
+    provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_6[@]}"
+    provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_7[@]}"
+    provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_8[@]}"
+    provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_9[@]}"
+    provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${SAM_PTH[@]}"
 
     provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator"   "${QWEN3VL[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/upscale_models"     "${UPSCALER_MODELS[@]}"
