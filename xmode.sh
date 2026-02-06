@@ -5,7 +5,7 @@ source /venv/main/bin/activate
 WORKSPACE=${WORKSPACE:-/workspace}
 COMFYUI_DIR="${WORKSPACE}/ComfyUI"
 
-echo "=== Vast.ai ComfyUI provisioning (Imran's Flux/Video edition) ==="
+echo "=== ComfyUI запускает ( x-mode) ==="
 
 APT_PACKAGES=()           # если нужно — добавь sudo apt install ...
 PIP_PACKAGES=()           # глобальные pip пакеты, если сверх requirements
@@ -29,6 +29,7 @@ NODES=(
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/jnxmx/ComfyUI_HuggingFace_Downloader"
+    "https://github.com/plugcrypt/CRT-Nodes"
 )
 
 # ЗАГРУЗКА ФАЙЛОВ НУЖНЫХ
@@ -103,7 +104,19 @@ BBOX_9=(
     "https://huggingface.co/gazsuv/pussydetectorv4/resolve/main/hand_yolov8s.pt"
 )
 
-QWEN3VL=(
+BBOX_10=(
+    "https://huggingface.co/AunyMoons/loras-pack/blob/main/foot-yolov8l.pt"
+)
+
+QWEN3VL_1=(
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal"
+)
+
+QWEN3VL_2=(
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/model-00001-of-00002.safetensors"
+)
+
+QWEN3VL_3=(
     "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/model-00001-of-00002.safetensors"
     "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/model-00002-of-00002.safetensors"
 )
@@ -119,9 +132,9 @@ UPSCALER_MODELS=(
 function provisioning_start() {
     echo ""
     echo "##############################################"
-    echo "# Provisioning container                     #"
+    echo "# ебашим жоска и мрачно                      #"
     echo "# gazik X-MODE setup 2025-2026               #"
-    echo "# This will take some time                   #"
+    echo "# бабки бабки                                #"
     echo "##############################################"
     echo ""
 
@@ -149,6 +162,7 @@ function provisioning_start() {
     provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_7[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_8[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_9[@]}"
+    provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_10[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/sams"   "${SAM_PTH[@]}"
 
     provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator"   "${QWEN3VL[@]}"
