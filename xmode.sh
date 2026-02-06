@@ -30,6 +30,7 @@ NODES=(
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/jnxmx/ComfyUI_HuggingFace_Downloader"
     "https://github.com/plugcrypt/CRT-Nodes"
+    "https://github.com/EllangoK/ComfyUI-post-processing-nodes"
 )
 
 # ЗАГРУЗКА ФАЙЛОВ НУЖНЫХ
