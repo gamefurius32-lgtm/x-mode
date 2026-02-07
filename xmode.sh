@@ -177,8 +177,8 @@ function provisioning_start() {
     provisioning_get_files "${COMFYUI_DIR}/models/sams"   "${SAM_PTH[@]}"
 
     provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator/Qwen3-VL-4B-Instruct-heretic-7refusal"   "${QWEN3VL_1[@]}"
-    provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator"   "${QWEN3VL_2[@]}"
-    provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator"   "${QWEN3VL_3[@]}"
+    provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator/Qwen3-VL-4B-Instruct-heretic-7refusal"   "${QWEN3VL_2[@]}"
+    provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator/Qwen3-VL-4B-Instruct-heretic-7refusal"   "${QWEN3VL_3[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/upscale_models"     "${UPSCALER_MODELS[@]}"
 
     echo ""
