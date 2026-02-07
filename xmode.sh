@@ -56,7 +56,7 @@ UNET_MODELS=(
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/gazsuv/pussydetectorv4/resolve/main/zImageClearVae_natural.safetensors"
+    "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors"
 )
 
 DIFFUSION_MODELS=(
