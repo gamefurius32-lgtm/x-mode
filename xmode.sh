@@ -111,7 +111,17 @@ BBOX_10=(
 )
 
 QWEN3VL_1=(
-    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/added_tokens.json"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/chat_template.jinja"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/config.json"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/generation_config.json"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/merges.txt"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/model.safetensors.index.json"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/preprocessor_config.json"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/special_tokens_map.json"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/tokenizer.json"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/tokenizer_config.json"
+    "https://huggingface.co/svjack/Qwen3-VL-4B-Instruct-heretic-7refusal/resolve/main/vocab.json"
 )
 
 QWEN3VL_2=(
@@ -166,7 +176,7 @@ function provisioning_start() {
     provisioning_get_files "${COMFYUI_DIR}/models/ultralytics/bbox"   "${BBOX_10[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/sams"   "${SAM_PTH[@]}"
 
-    provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator"   "${QWEN3VL_1[@]}"
+    provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator/Qwen3-VL-4B-Instruct-heretic-7refusal"   "${QWEN3VL_1[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator"   "${QWEN3VL_2[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/prompt_generator"   "${QWEN3VL_3[@]}"
     provisioning_get_files "${COMFYUI_DIR}/models/upscale_models"     "${UPSCALER_MODELS[@]}"
